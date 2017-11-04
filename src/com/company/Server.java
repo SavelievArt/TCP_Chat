@@ -66,7 +66,7 @@ public class Server {
 
     void privateMessage(String msg, String nickName){
             for(Map.Entry<PrintStream, String> m : this.Clients.entrySet()){
-                if(m.getValue() == nickName){
+                if(m.getValue().equals(nickName)){
                     PrintStream ps = m.getKey();
                     ps.println(msg);
                 }
